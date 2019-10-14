@@ -642,10 +642,14 @@ h5 {
 .slider-container {
   display:flex;
   justify-content: center;
-  max-width:1140px;
+  max-width:100%;
+  padding:0 10%;
 }
-.slider {
-  max-width:700px;
+.slider-wrapper {
+  display:flex;
+  justify-content: center;
+}
+.slider {  
   width: 100%;
   height: 140px;
   margin-top: 90px; 
@@ -667,11 +671,106 @@ h5 {
 }
 
 
+/*Simple Article Image with Zoom*/
+ 
+.article-image {  
+  width: 100%;
+  max-width: 815px;
+  max-height: 500px;
+
+  margin-bottom: 90px;
+  z-index: 0;
+  position: relative;
+}
+
+.article-image__zoom {
+  opacity: 0;
+  position: absolute;
+  z-index: 200;
+  right: 0;
+  top: 0;
+  width: 790px;
+  height: 480px;
+  background-size: 120px 120px;
+  background: url(../images/zoom-tool.svg) no-repeat center center;
+}
+
+.article-image__zoom.hover {
+  opacity: 1;
+}
+
+.article-image>img {
+  width: 100%;
+}
+
+figcaption>p {
+  font-family: Geometria;
+  margin: 20px 0 60px 0;
+  font-size: 14px;
+  line-height: 18px;
+}
 
 
 
 /*OPINIONS*/
+/*Article Opinions block*/
+.article-opinions {
+  position: relative;
+  padding-left: 30px;
+  margin: 60px 0;
+  margin-top: 120px;
+}
 
+.article-opinions:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 100%;
+  z-index: 100;
+  border-left: 2px solid #004a97;
+}
+
+.article-opinions::after {
+  z-index: 200;
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: url(../images/opinions-sign.svg) no-repeat left top;
+}
+
+.article-opinions>h1 {
+  font-family: Geometria;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 100;
+}
+
+.article-opinions>p {
+  font-size: 14px;
+  line-height: 18px;
+  color:#252b32;
+}
+
+.article-opinions>cite {
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 100;
+}
+
+.article-opinions>span {
+  font-size: 20px;
+  line-height: 30px;
+  opacity: 0.5;
+}
+
+.article-opinions>img {
+  margin: 0;
+  float: left;
+}
 
 
 
@@ -901,6 +1000,10 @@ margin-left:0;
 .article-exclamation:after {    
   left: -40px; 
   max-width:100%; 
+}
+
+.article-opinions::after {
+  left:-5px;
 }
 
 .read-also {
