@@ -1022,11 +1022,14 @@ footer {
   height:100%;
   padding: 0;
 }
-footer .container {
+footer .footer {
   padding: 0;
 }
 footer .center-column {
   flex-direction:column;
+}
+footer .logo {
+margin-left:5px;
 }
 footer .column-1 { 
  max-width:100%;
