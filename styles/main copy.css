@@ -411,26 +411,13 @@ figcaption>p {
 .article-annotation-image-rs__figcaption-wrapper.centred span { 
   margin-top: 30px; 
 }
-.slider {
-  width: 100%;
-  height: 140px;
-  margin-top: 90px; 
-  margin-bottom: 90px;
-}
-.slider>figcaption {
-  top: 140px;
-}
-.slider-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  width: 90vw;
-  height: 130px;
-  z-index: 5500;
-  padding: 0px 20px;
-}
+
+
+
+
+
+
+
 
 .article-opinions::after {
      left: -10px;

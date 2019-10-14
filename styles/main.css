@@ -405,7 +405,13 @@ header .logo img {
   width: 130px;
 }
 
-.social-box a:hover #social {
+.social-box a:hover #social-1 {
+  fill: #4a76a8;
+}
+.social-box a:hover #social-2 {
+  fill: #4a76a8;
+}
+.social-box a:hover #social-3 {
   fill: #4a76a8;
 }
  
@@ -631,8 +637,34 @@ h5 {
   font-size: 3.46rem;
   color: #004a97;
 }
+/*SLIDER*/
+.slider {
+  width: 100%;
+  height: 140px;
+  margin-top: 90px; 
+  margin-bottom: 90px;
+}
+.slider>figcaption {
+  top: 140px;
+}
+.slider-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  width: 90vw;
+  height: 130px;
+  z-index: 5500;
+  padding: 0px 20px;
+}
+/*OPINIONS*/
 
-/*carousel block */
+
+
+
+
+/*READ ALSO */
 .read-also {
   width: 100%;
   height: 400px;
@@ -856,10 +888,6 @@ margin-left:0;
   left: -40px; 
   max-width:100%; 
 }
-
-
-
-
 
 .read-also {
   width: 100%;
