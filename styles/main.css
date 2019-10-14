@@ -1020,7 +1020,10 @@ footer {
   max-width:99vw;
   display:flex;
   height:100%;
-  padding: 10px;
+  padding: 0;
+}
+footer .container {
+  padding: 0;
 }
 footer .center-column {
   flex-direction:column;
