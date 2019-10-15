@@ -791,7 +791,8 @@ figcaption > p {
 .read-also__carousel {
 	height: 400px;
 	display: flex;
-	flex-direction: row;
+  flex-direction: row;
+  flex-wrap:wrap;
 	justify-content: space-between;
 }
 
@@ -1031,6 +1032,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) { 
+  
 }
 
 /* Large devices (desktops, 992px and up) */
