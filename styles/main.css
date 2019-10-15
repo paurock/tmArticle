@@ -1045,7 +1045,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	}
 	.article-opinions::after {
 		left: -5px;
-	}
+  }
+  
+
+  .article-annotation-image {
+    margin-bottom: -70px;
+  }
 
 	.article-annotation-image__figcaption-wrapper {
 		width: 100%;
@@ -1127,6 +1132,23 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+  .article-annotation-image__figcaption-wrapper-centred {
+     margin-left:0;
+  }
+  .article-annotation-image figcaption > img {
+  position: relative;
+    top: -421px;
+    left: 275px;
+    object-fit: cover;
+    width: 66%;
+    max-height: 100%;
+    max-width: 815px;
+    max-height: 415px;
+    z-index: 100;
+  }
+  .article-annotation-image figcaption {
+    margin-bottom:-265px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
