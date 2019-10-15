@@ -1153,6 +1153,14 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .article-annotation-image figcaption > img {    
+    top: -470px;
+    left: 417px;
+     width:100%;
+}
+.article-annotation-image__figcaption-wrapper-centred {
+  left: 125px;
+}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
