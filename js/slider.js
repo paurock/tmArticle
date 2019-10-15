@@ -34,5 +34,5 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
 
 }
-const timerId = () =>  setInterval(()=>plusSlide(), 3000)
-timerId()
+/* const timerId = () =>  setInterval(()=>plusSlide(), 3000)
+timerId() */

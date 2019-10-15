@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./styles/bootstrap.min.css" crossorigin="anonymous" />
+		<title>Test</title>
+		<style>
+			.slider-container {           
+                display: flex;
+                max-width: 100%;
+                max-height:500px;
+                justify-content: center;
+                
+                 
+			}		 
+
+			.slider__image {
+				max-height: 500px;
+				right: 0;
+				z-index: 5000;
+			}
+
+			.slider-nav { 
+                position:relative;                
+				top: -500px;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 500px;
+				z-index: 5500;
+                padding-bottom:50px;
+                padding-right:50px;
+                padding-left:50px;
+			}
+			.slider-nav .next,
+			.prev {
+				opacity: 0.6;
+			}
+		</style>
+	</head>
+	<body>
+		<!--SLIDER START-->
+		<div class="container-fluid slider-container">
+			<div class="row">
+				<div class=" col col-md-12 slider-wrapper">
+					<figure class="slider">
+						<div class="slider__image">
+							<img src="./images/slider/slide1.jpg" alt="slider-image" />
+						</div>
+						<div class="slider__image">
+							<img src="./images/slider/slide2.jpg" alt="slider-image" />
+						</div>
+						<div class="slider__image">
+							<img src="./images/slider/slide3.jpg" alt="slider-image" />
+						</div>
+						<div class="slider-nav">
+							<a class="prev" onclick="minusSlide()">
+								<img src="./images/slider/slider-arrow-left.svg" alt="prev"
+							/></a>
+							<a class="next" onclick="plusSlide()">
+								<img src="./images/slider/slider-arrow-right.svg" alt="next"
+							/></a>
+						</div>
+						<figcaption>
+							<p>
+								Мало кто знает, что на заводе была разработана модификация с откидным тентованным верхом
+								для десантирования с воздуха.
+							</p>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+		<!--SLIDER END-->
+	</body>
+	<script>
+		/* Индекс слайда по умолчанию */
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+		function plusSlide() {
+			showSlides((slideIndex += 1));
+		}
+
+		/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+		function minusSlide() {
+			showSlides((slideIndex -= 1));
+		}
+
+		/* Устанавливает текущий слайд */
+		function currentSlide(n) {
+			showSlides((slideIndex = n));
+		}
+
+		/* Основная функция слайдера */
+		function showSlides(n) {
+			let i;
+			const slides = document.getElementsByClassName('slider__image');
+			if (n > slides.length) {
+				slideIndex = 1;
+			}
+			if (n < 1) {
+				slideIndex = slides.length;
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = 'none';
+			}
+
+			slides[slideIndex - 1].style.display = 'block';
+		}
+		const timerId = () => setInterval(() => plusSlide(), 3000);
+		timerId();
+	</script>
+</html>
