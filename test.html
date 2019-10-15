@@ -7,112 +7,80 @@
 		<link rel="stylesheet" href="./styles/bootstrap.min.css" crossorigin="anonymous" />
 		<title>Test</title>
 		<style>
-			.slider-container {           
-                display: flex;
-                max-width: 100%;
-                max-height:500px;
-                justify-content: center;
-                
-                 
-			}		 
-
-			.slider__image {
-				max-height: 500px;
-				right: 0;
-				z-index: 5000;
+			.major-main-container {
+				border: 1px solid gray;
 			}
-
-			.slider-nav { 
-                position:relative;                
-				top: -500px;
-				width: 100%;
+			/* .text-wrapper {
+				padding-right: 10%;
+				padding: 5%;
+			} */
+			.article-annotation-image {
 				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				height: 500px;
-				z-index: 5500;
-                padding-bottom:50px;
-                padding-right:50px;
-                padding-left:50px;
+				width: 100%;
 			}
-			.slider-nav .next,
-			.prev {
-				opacity: 0.6;
+
+			figcaption {
+				margin-top: -50px;
+				min-width: 100%;
+				z-index: 0;
+				z-index: 0;
+			}
+			.article-annotation-image > img {
+				position: relative;
+				top: 50px;
+				right: 70%;
+				object-fit: cover;
+				width: 100%;
+				max-height: 100%;
+				max-width: 815px;
+				max-height: 415px;
+				z-index: 100;
+			}
+			.article-annotation-image__figcaption-wrapper {
+				position: relative;
+				top: 40px;
+				width: 80%;
+				background: indianred;
+				min-height:415px;
+			}
+			.article-annotation-image__figcaption-wrapper-centred {
+				position: relative;
+				top: -255px;
+				right: 0;
+				margin: 0auto;
+				margin-top: -100px;
+				margin-left: 90px;
+				max-width: 245px;
+				border: 2px solid yellow;
+				text-align: right;
 			}
 		</style>
 	</head>
 	<body>
-		<!--SLIDER START-->
-		<div class="container-fluid slider-container">
+        <!--SPLITTED IMAGE CENTRED START-->
+		<div class="container-fluid major-main-container">
 			<div class="row">
-				<div class=" col col-md-12 slider-wrapper">
-					<figure class="slider">
-						<div class="slider__image">
-							<img src="./images/slider/slide1.jpg" alt="slider-image" />
-						</div>
-						<div class="slider__image">
-							<img src="./images/slider/slide2.jpg" alt="slider-image" />
-						</div>
-						<div class="slider__image">
-							<img src="./images/slider/slide3.jpg" alt="slider-image" />
-						</div>
-						<div class="slider-nav">
-							<a class="prev" onclick="minusSlide()">
-								<img src="./images/slider/slider-arrow-left.svg" alt="prev"
-							/></a>
-							<a class="next" onclick="plusSlide()">
-								<img src="./images/slider/slider-arrow-right.svg" alt="next"
-							/></a>
-						</div>
+				<div class="col col-md-3 d-none aside-wrapper"></div>
+				<div class="col col-md-12 col-lg-12 text-wrapper">
+					<!--Image with inscription-->
+					<figure class="article-annotation-image">
 						<figcaption>
-							<p>
-								Мало кто знает, что на заводе была разработана модификация с откидным тентованным верхом
-								для десантирования с воздуха.
-							</p>
+							<div class="article-annotation-image__figcaption-wrapper"></div>
+							<div class="article-annotation-image__figcaption-wrapper-centred">
+								<h4>h4. ГАЗ-десантник</h4>
+								<p>
+									Мало кто знает, что на заводе была разработана модификация с откидным тентованным
+									верхом для десантирования с воздуха. В «сложенном» виде машина не превышала по
+									высоте 170 сантиметров — так она умещалась в военно-транспортном самолете Ан-12.
+									Каждый ГАЗ-66 в течение срока эксплуатации мог совершить по три прыжка с парашютом.
+								</p>
+							</div>
 						</figcaption>
+						<img src="images/pictures/truck-1.png" alt="Image with caption" />
 					</figure>
 				</div>
 			</div>
-		</div>
-		<!--SLIDER END-->
+        </div>
+        <!--SPLITTED IMAGE CENTRED END-->
 	</body>
-	<script>
-		/* Индекс слайда по умолчанию */
-		let slideIndex = 1;
-		showSlides(slideIndex);
-
-		/* Функция увеличивает индекс на 1, показывает следующй слайд*/
-		function plusSlide() {
-			showSlides((slideIndex += 1));
-		}
-
-		/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-		function minusSlide() {
-			showSlides((slideIndex -= 1));
-		}
-
-		/* Устанавливает текущий слайд */
-		function currentSlide(n) {
-			showSlides((slideIndex = n));
-		}
-
-		/* Основная функция слайдера */
-		function showSlides(n) {
-			let i;
-			const slides = document.getElementsByClassName('slider__image');
-			if (n > slides.length) {
-				slideIndex = 1;
-			}
-			if (n < 1) {
-				slideIndex = slides.length;
-			}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = 'none';
-			}
-
-			slides[slideIndex - 1].style.display = 'block';
-		}
-		const timerId = () => setInterval(() => plusSlide(), 3000);
-		timerId();
-	</script>
 </html>
