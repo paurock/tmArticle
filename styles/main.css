@@ -1111,6 +1111,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     z-index: 0;
     height: 60vw;
   }
+  .article-image img {
+	padding-right: 25px;
+  }
 
   .article-opinions::after {
     left: -5px;
