@@ -1138,6 +1138,31 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		color: #252b32;
 	}
 
+	.article-annotation-image-rs {
+		flex-direction: column;
+	}
+	.article-annotation-image-rs>figcaption {
+		order:2;
+		max-width:95%;
+	}
+	.article-annotation-image-rs__figcaption-wrapper-centred p {
+		max-width:80%;
+	}
+	.article-annotation-image-rs__figcaption-wrapper-centred span.shiftUp320  {
+	   position: absolute;
+	   top:-30px;
+	}
+
+
+	.article-annotation-image-rs img {
+		max-width: 95%;
+		max-height: 95%;
+		display: block;
+		order:1;
+	}
+
+
+
 	.slider {
 		height: 35vw;
 	}
