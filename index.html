@@ -11,6 +11,39 @@
 </head>
 
 <body>
+ <!--Hamburger menu start-->
+   
+    <div class="d-md-none menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+    <nav class="d-md-none menu">
+      <div class="menu-wrapper">
+        <div class="menu-small-logo"><img src="images/logo-small.png" alt="small logo"></div>
+          <ul class="menu-nav">
+              <li>
+                <a href="#">НАСТОЯЩЕЕ ВРЕМЯ</a>
+              </li>
+              <li>
+                <a href="#">ВРЕМЯ, ВПЕРЁД</a>
+              </li>
+              <li>
+                <a href="#">ВРЕМЯ
+                  ВЫБИРАТЬ</a>
+              </li>
+              <li>
+                <a href="#">ВНЕ ВРЕМЕНИ</a>
+              </li>
+              <li>
+                <a href="#">МАШИНЫ ВРЕМЕНИ</a>
+              </li>
+            </ul>
+
+      </div>
+      
+    </nav>
+    <!--Hamburger menu end-->
   <div id="global-container">
     <div id="sub-global-container">
       <!--HEADER START-->
@@ -483,7 +516,7 @@
               <div class="column-3">
                 <h4>Адрес редакции, издательства:</h4>
                 <p>
-                  603004, Нижегородская обл., г. Нижний Новгород, <wbr /> пр-т
+                  603004, Нижегородская обл., г. Нижний Новгород, <br /> пр-т
                     Ленина, д. 107, литера Р
                   </p>
               </div>
@@ -496,5 +529,37 @@
 </body>
 <script src="js/main.js"></script>
 <script src="js/slider.js"></script>
+<script> 
+  //MENU HAMBURGER//
 
+  // Select DOM Items
+  const menu = document.querySelector('.menu');
+  const menuBtn = document.querySelector('.menu-btn');
+  const menuNav = document.querySelector('.menu-nav');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  // Set Initial State Of Menu
+  let showMenu = false;
+
+  menuBtn.addEventListener('click', toggleMenu);
+
+  function toggleMenu() {
+    if (!showMenu) {
+      menuBtn.classList.add('close');
+      menu.classList.add('show');
+      menuNav.classList.add('show');
+      navItems.forEach(item => item.classList.add('show'));
+
+      // Set Menu State
+      showMenu = true;
+    } else {
+      menuBtn.classList.remove('close');
+      menu.classList.remove('show');
+      menuNav.classList.remove('show');
+      navItems.forEach(item => item.classList.remove('show'));
+      // Set Menu State
+      showMenu = false;
+    }
+  }
+  </script>
 </html>
