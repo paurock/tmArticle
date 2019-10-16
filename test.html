@@ -1,86 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="./styles/bootstrap.min.css" crossorigin="anonymous" />
-		<title>Test</title>
-		<style>
-			.major-main-container {
-				border: 1px solid gray;
-			}
-			/* .text-wrapper {
-				padding-right: 10%;
-				padding: 5%;
-			} */
-			.article-annotation-image {
-				display: flex;
-				width: 100%;
-			}
 
-			figcaption {
-				margin-top: -50px;
-				min-width: 100%;
-				z-index: 0;
-				z-index: 0;
-			}
-			.article-annotation-image > img {
-				position: relative;
-				top: 50px;
-				right: 70%;
-				object-fit: cover;
-				width: 100%;
-				max-height: 100%;
-				max-width: 815px;
-				max-height: 415px;
-				z-index: 100;
-			}
-			.article-annotation-image__figcaption-wrapper {
-				position: relative;
-				top: 40px;
-				width: 80%;
-				background: indianred;
-				min-height:415px;
-			}
-			.article-annotation-image__figcaption-wrapper-centred {
-				position: relative;
-				top: -255px;
-				right: 0;
-				margin: 0auto;
-				margin-top: -100px;
-				margin-left: 90px;
-				max-width: 245px;
-				border: 2px solid yellow;
-				text-align: right;
-			}
-		</style>
-	</head>
-	<body>
-        <!--SPLITTED IMAGE CENTRED START-->
-		<div class="container-fluid major-main-container">
-			<div class="row">
-				<div class="col col-md-3 d-none aside-wrapper"></div>
-				<div class="col col-md-12 col-lg-12 text-wrapper">
-					<!--Image with inscription-->
-					<figure class="article-annotation-image">
-						<figcaption>
-							<div class="article-annotation-image__figcaption-wrapper"></div>
-							<div class="article-annotation-image__figcaption-wrapper-centred">
-								<h4>h4. ГАЗ-десантник</h4>
-								<p>
-									Мало кто знает, что на заводе была разработана модификация с откидным тентованным
-									верхом для десантирования с воздуха. В «сложенном» виде машина не превышала по
-									высоте 170 сантиметров — так она умещалась в военно-транспортном самолете Ан-12.
-									Каждый ГАЗ-66 в течение срока эксплуатации мог совершить по три прыжка с парашютом.
-								</p>
-							</div>
-						</figcaption>
-						<img src="images/pictures/truck-1.png" alt="Image with caption" />
-					</figure>
-				</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="./styles/bootstrap.min.css" crossorigin="anonymous" />
+	<title>Test</title>
+	<style>
+		.major-main-container {
+			border: 1px solid gray;
+		}
+
+		.text-wrapper.pr-0 {
+			padding-right: 0;
+			padding: 5%;
+		}
+
+		.article-annotation-image-rs {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.article-annotation-image-rs img {
+			max-width: 500px;
+			max-height: 800px;
+			padding-right: 0;
+		}
+
+		.article-annotation-image-rs__figcaption-wrapper-centred {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			padding-right: 60px;
+			min-width: 425px;
+			min-height: 100%;
+			top: 50px;
+			width: 245px;
+		}
+
+		.article-annotation-image-rs__figcaption-wrapper-centred p {
+			margin-top: auto;
+		}
+
+		.article-annotation-image-rs__figcaption-wrapper-centred span {
+			margin-bottom: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<!--IMAGE RIGHT SIDE W/INSCRIPTION-->
+	<div class="container-fluid major-main-container">
+		<div class="row">
+			<div class="col col-md-3 d-none aside-wrapper"></div>
+			<div class="col col-md-12 col-lg-12 text-wrapper pr-0" style="background-color: skyblue">
+
+				<figure class="article-annotation-image-rs">
+					<figcaption>
+						<div class="article-annotation-image-rs__figcaption-wrapper-centred">
+							<p>
+								Автомобиль кардинально отличался от предшественников. Прежде
+								всего, он имел необычную для техники марки «ГАЗ» компоновку.
+								Бескапотная кабина располагалась над передней осью, и для
+								доступа к двигателю откидывалась вперед. Грузовик оснащался
+								новым 8-цилиндровым V-образным мотором мощностью 115 л.с. и
+								разгонялся до 95 км/час. Как и его предшественник ГАЗ-63,
+								грузовик имел возможность подключения переднего ведущего моста
+								и включения понижающей передачи. Благодаря низкому центру
+								тяжести машина уверенно держалась на косогоре.
+							</p>
+							<span>На фото — «подпись к изображению»</span>
+						</div>
+					</figcaption>
+					<img src="images/pictures/truck-2.png" alt="Image with caption" />
+				</figure>
 			</div>
-        </div>
-        <!--SPLITTED IMAGE CENTRED END-->
-	</body>
+		</div>
+	</div>
+	<!--IMAGE RIGHT SIDE W/INSCRIPTION-->
+</body>
+
 </html>
