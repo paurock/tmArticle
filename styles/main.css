@@ -1178,6 +1178,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.read-also {
 		width: 100%;
 		height: 100%;
+		align-items:flex-start;
+		max-height: 1500px;
 		margin-bottom: unset;
 	}
 
@@ -1189,7 +1191,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	footer {
 		max-width: 99vw;
 		display: flex;
-		height: 100%;
+		align-items:flex-start;
+		max-height: 350px;
+		height: 100%;		 
 		padding: 0;
 	}
 
