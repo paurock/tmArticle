@@ -36,6 +36,9 @@ p {
 	font-size: 20px;
 	font-weight: 100;
 }
+.paragraph {
+	margin-left:-20px;	 
+}
 
 span {
 	font-weight: 100;
@@ -1059,6 +1062,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 	#main-image {
 		margin-top: 60px;
+		margin-bottom: 40px;
 		width: 100vw;
 	}
 
@@ -1112,8 +1116,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		width: 95vw;
 	}
 	.article-image__zoom {
-    right: -180px;
-    top: -110px;
+		right: -225px;
+		top: -140px;
 	}
 	.article-image figcaption {
 		padding-left: 10px;
@@ -1255,7 +1259,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		max-width: 100%;
 	}
 
-/* MENU HAMBUTGER */
+/* humburger */
 .menu {
     position: fixed;
     top: 0;
@@ -1300,7 +1304,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
   .menu {
     visibility: hidden;
-    height: 100vh;
+    height: 310px;
     transform: translate(100vw, 0);
     transition: all 0.5s ease-out;
   }
@@ -1410,6 +1414,19 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.article-annotation-image figcaption {
 		margin-bottom: -265px;
 	}
+	.article-annotation-image-rs {
+		flex-direction:column;
+		margin-top:0;
+	}
+	.article-annotation-image-rs__figcaption-wrapper-centred {
+		order:2;
+	}
+	.article-annotation-image-rs img {		
+		order:1;
+		margin-top: 90px;
+		
+	}
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1427,6 +1444,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.article-annotation-image figcaption {
 		margin-bottom: 60px;
 		max-height: 455px;
+	}
+	.article-annotation-image-rs {
+		flex-direction: row;
 	}
 }
 
