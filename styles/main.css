@@ -436,6 +436,7 @@ header .logo img {
   flex-direction: column;
   color: #e88354;
   padding-left: 90px;
+  text-transform:uppercase;
 }
 
 .article-info-content__sidebar li.feedback {
@@ -657,7 +658,7 @@ h5 {
 .article-annotation-image figcaption > img {
   position: relative;
   top: -550px;
-  left: 415px;
+  left: 400px;
   object-fit: cover;
   width: 100%;
   max-height: 100%;
@@ -743,12 +744,17 @@ h5 {
   max-width: 100%;
   max-height: 500px;
   justify-content: center;
+  margin-top:60px;
+  margin-right:-10px;
 }
 
 .slider-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+.slider {
+	margin-right:10px;
 }
 
 .slider__image {
@@ -806,7 +812,8 @@ h5 {
   width: 100%;
   max-width: 815px;
   max-height: 500px;
-  margin-left: 15px;
+  margin-left: 55px;
+  
   margin-bottom: 90px;
   margin-top: 60px;
   z-index: 0;
@@ -1265,7 +1272,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 @media (min-width: 992px) {
   .article-annotation-image figcaption > img {
     top: -470px;
-    left: 417px;
+    left: 400px;
     width: 100%;
   }
 
