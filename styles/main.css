@@ -648,60 +648,65 @@ h5 {
 .text-wrapper.splitted-image {
 }
 
+.article-annotation-image__wrapper-centred {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: center;
+  padding-left: 30%;
+  padding-right: 40px;
+  max-height: 415px;
+  overflow: hidden;
+}
+
+.aside-wrapper {
+  min-width: 415px;
+}
+
 .article-annotation-image {
-	display: flex;
-	width: 100%;
+  position: relative;
+}
+.row.article-annotation-image {
+  position: relative;
 }
 
-.article-annotation-image figcaption > img {
-	position: relative;
-	top: -550px;
-	left: 400px;
-	object-fit: cover;
-	width: 100%;
-	max-height: 100%;
-	max-width: 815px;
-	max-height: 415px;
-	z-index: 100;
+.article-annotation-image img {
+  position: relative;
+  top: 40px;
+  left:-5px;
+  z-index: 100;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.article-annotation-image__figcaption-wrapper {
-	position: relative;
-	top: 40px;
-	width: 80%;
-	background: #004a97;
-	min-height: 415px;
+.article-annotation-image__background {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  height: 100%;
+  min-width: 70%;
+  max-height: 415px;
+  overflow: hidden;
+  background: #004a97;
+
 }
 
-.article-annotation-image__figcaption-wrapper-centred {
-	position: relative;
-	top: -190px;
-	left: 0;
-	margin: 0auto;
-	margin-top: -100px;
-	margin-left: 130px;
-	margin-right: 40px;
-	max-width: 245px;
-	text-align: right;
-}
+.article-annotation-image__wrapper-centred > h4 {
+  font-family: Geometria;
+  font-weight: 600;
+  letter-spacing: 2px;
 
-.article-annotation-image > figcaption p {
-	font-family: Geometria;
-	color: #fafafa;
-	font-size: 14px;
-	line-height: 18px;
-	margin-bottom: auto;
+  color: #fafafa;
+  font-size: 14px;
+  text-align: right;
 }
-
-.article-annotation-image > figcaption h4 {
-	font-family: Geometria;
-	font-weight: 600;
-	letter-spacing: 2px;
-	margin-top: auto;
-	margin-bottom: 20px;
-	color: #fafafa;
-	font-size: 14px;
-	text-align: right;
+.article-annotation-image__wrapper-centred > p {
+  font-family: Geometria; 
+  color: #fafafa;
+  font-size: 14px;
+  text-align: right;
+  line-height:18px;
+  margin-bottom: 20px;
 }
 
 /*IMAGE RIGHT SIDE W/INSCRIPTION*/
@@ -1129,39 +1134,19 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		left: -5px;
 	}
 
-	.article-annotation-image {
-		margin-bottom: -70px;
-	}
-
-	.article-annotation-image__figcaption-wrapper {
-		width: 100%;
-		min-height: 180px;
-	}
-
-	.article-annotation-image__figcaption-wrapper-centred {
-		position: relative;
-		top: 50px;
-		left: 0;
-		margin: 0auto;
-		margin-top: unset;
-		margin-left: unset;
-		margin-right: unset;
-		max-width: unset;
-	}
-
-	.article-annotation-image figcaption img {
-		top: -320px;
-		left: 25px;
-	}
-
-	.article-annotation-image figcaption p {
-		color: #252b32;
-	}
-
-	.article-annotation-image figcaption h4 {
-		color: #252b32;
-	}
-
+/* 320 up Annotation image center*/
+.article-annotation-image img {
+	position: relative;
+	top: 0;
+	left: -5px;
+	min-width: 93vw;
+	
+  }
+  .article-annotation-image__background {
+   
+	min-width: 100%;
+   
+  }
 	.article-annotation-image-rs {
 		flex-direction: column;
 	}
