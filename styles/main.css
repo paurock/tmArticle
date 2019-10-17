@@ -1447,3 +1447,22 @@ Custom media queries
 /* Set width to make card deck cards 100% width */
 @media (max-width: 950px) {
 }
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+IE11
+*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { 
+	.row {
+		width:100%;
+	}
+	.article-annotation-image-rs__figcaption-wrapper-centred p {
+		margin-top:150px;
+	}
+	.footer  {
+		width:100%;
+		height:115px;
+	}
+	
+ }
+
