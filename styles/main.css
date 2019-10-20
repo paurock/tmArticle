@@ -655,8 +655,7 @@ h5 {
 
 .article-annotation-image__wrapper-centred {
   display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  flex-direction: column;  
   justify-content: center;
   padding-left: 30%;
   padding-right: 40px;
@@ -681,7 +680,10 @@ h5 {
   left: -5px;
   z-index: 100;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100%;  
+object-fit: contain;
+height:415px;
+width:815px;
 }
 
 .article-annotation-image__background {
@@ -690,16 +692,17 @@ h5 {
   z-index: 0;
   height: 100%;
   min-width: 70%;
+  height: 415px;
   max-height: 415px;
   overflow: hidden;
   background: #004a97;
 }
-
+ 
 .article-annotation-image__wrapper-centred > h4 {
   font-family: Geometria;
   font-weight: 600;
-  letter-spacing: 2px;
-
+  letter-spacing: 2px;   
+  margin-bottom: 25px;
   color: #fafafa;
   font-size: 14px;
   text-align: right;
@@ -1383,16 +1386,25 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .row .article-annotation-image {
     max-height: 415px;
   }
-
+  .article-annotation-image__wrapper-centred {
+	  padding-left:0;
+	  padding-right:40%;
+  }
   .article-annotation-image img {
-    max-width: 80%;
-    max-height: 80%;
+	top: 0;
+    left: -150px;
+    max-width: 550px;
+    max-height: 100%;
+    padding-right: 25%;     
+   
   }
 
   .article-annotation-image figure {
     top: -340px;
     left: 415px;
   }
+
+  /*image-rs*/
   .article-annotation-image-rs {
     flex-direction: column;
     margin-top: 0;
@@ -1408,12 +1420,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .article-annotation-image img {
-	  max-width:100%;
-	  max-height: 100%;
-    top: 380px;
-    left: -415px;
-  }
   .article-annotation-image-rs {
     flex-direction: row;
   }
@@ -1421,6 +1427,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .article-annotation-image img {
+    max-width: 815px;
+    max-height: 100%;
+    top: 380px;
+    left: -415px;
+  }
 }
 
 /*
