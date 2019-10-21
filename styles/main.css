@@ -1089,7 +1089,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		width: 100%;
 		justify-content: center;
 	}
-
+	header .upper-row {		 
+		margin-top: 2px;
+	}
 	header .archive {
 		line-height: 1rem;
 	}
@@ -1153,10 +1155,14 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		margin-left: -5px;
 		width: 95vw;
 	}
+	.zoom-tool-image {
+		top:180px;
+		left:0;
+	}
 	.article-image__zoom {
 		width: 100vw;
 		display: flex;
-		top: -140px;
+		top: -130px;		 
 	}
 	.article-image__zoom a {
 		width: 100%;

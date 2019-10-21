@@ -52,8 +52,7 @@ const timerId = () => setInterval(() => checkPress(), intervalTime);
 
 function checkPress() {
 	if (!pressed) {
-		plusSlide();
-		console.log(pressed);
+		plusSlide();		
 	}
 }
 timerId();
