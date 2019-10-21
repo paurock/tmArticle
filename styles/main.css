@@ -59,6 +59,7 @@ ol {
 	justify-content: center;
 	width: 100%;
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 #sub-global-container {
@@ -1490,15 +1491,22 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	}
 	.article-image {
 		max-width: 820px;
-  }
-  .text-wrapper {
-    padding-right: 5%;
-  }
-  .slider-container {
-    margin-top:40px;
-  }
+	}
+	.article-image img {
+		width: 99%;
+	}
+	.text-wrapper {
+		padding-right: 5%;
+	}
+	.slider-container {
+		margin-top: 40px;
+	}
+	.article-qoute {
+		max-width: 815px;
+	}
+
 	.paragraph {
-		width: 820px;
+		width: 815px;
 	}
 	.article-opinions::after {
 		left: 0;
