@@ -1494,6 +1494,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   .text-wrapper {
     padding-right: 5%;
   }
+  .slider-container {
+    margin-top:40px;
+  }
 	.paragraph {
 		width: 820px;
 	}
