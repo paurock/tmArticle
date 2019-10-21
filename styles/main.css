@@ -645,8 +645,6 @@ h5 {
 }
 
 /*SPLITTED IMAGE CENTRED*/
-.text-wrapper.splitted-image {
-}
 
 .article-annotation-image__wrapper-centred {
 	display: flex;
@@ -742,24 +740,29 @@ h5 {
 .article-annotation-image-rs__figcaption-wrapper-centred span {
 	margin-bottom: auto;
 }
+/*Zoom image*/
+.text-wrapper.zoom-image {
+	padding-right: 0;
+}
 
 /*SLIDER*/
 .slider-container {
 	display: flex;
+
 	max-width: 100%;
 	max-height: 500px;
 	justify-content: center;
 	margin-top: 60px;
-	margin-right: -10px;
 }
 
 .slider-wrapper {
 	display: flex;
+	left: 10px;
 	justify-content: center;
 	flex-wrap: wrap;
+	padding-right: 0px;
 }
 .slider {
-	margin-right: 10px;
 }
 
 .slider__image {
@@ -817,8 +820,7 @@ h5 {
 	width: 100%;
 	max-width: 815px;
 	max-height: 500px;
-	margin-left: 55px;
-
+	margin-left: 10px;
 	margin-bottom: 90px;
 	margin-top: 60px;
 	z-index: 0;
@@ -1123,7 +1125,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		height: 60vw;
 	}
 	.article-image img {
-		margin-left: -44px;
+		margin-left: 0;
 		width: 95vw;
 	}
 	.article-image__zoom {
@@ -1132,7 +1134,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	}
 	.article-image figcaption {
 		padding-left: 10px;
-		margin-left: -55px;
+		margin-left: 0;
 		padding-right: 10px;
 	}
 
@@ -1146,12 +1148,14 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		top: 0;
 		left: -5px;
 		min-width: 93vw;
+		max-height: 200px;
 	}
 	.article-annotation-image__background {
 		min-width: 100%;
 	}
 	.article-annotation-image-rs {
 		flex-direction: column;
+		margin-top: 0;
 	}
 	.article-annotation-image-rs > figcaption {
 		order: 2;
@@ -1174,8 +1178,11 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	}
 
 	.slider {
-		height: 35vw;
-		padding-right: 10px;
+		height: 170px;
+		padding-right: 15px;
+	}
+	.slider-wrapper {
+		left: 0;
 	}
 	.slider-figcaption .text-wrapper p {
 		margin-bottom: 0;
@@ -1369,13 +1376,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
 /*--------END 320px------------*/
 
-@media (max-width: 575px) {
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
-
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
 	.row .article-annotation-image {
@@ -1398,6 +1398,18 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		left: 415px;
 	}
 
+	.slider-figcaption {
+		margin-top: -50px;
+	}
+	.slider-wrapper {
+		left: -5px;
+	}
+	.article-image {
+		left: 40px;
+	}
+	.article-image img {
+		margin-left: -44px;
+	}
 	/*image-rs*/
 	.article-annotation-image-rs {
 		flex-direction: column;
@@ -1410,12 +1422,49 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		order: 1;
 		margin-top: 90px;
 	}
+
+	.article-qoute:after {
+		left: -10px;
+	}
+	.article-exclamation:after {
+		left: -37px;
+	}
+	.read-also__carousel-block {
+		width: 335px;
+	}
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+	.article-annotation-image__background {
+		max-height: 285px;
+	}
+	.article-annotation-image img {
+		max-height: unset;
+		top: 70px;
+		left: 5px;
+		padding-right: 10%;
+	}
+	.article-annotation-image__wrapper-centred {
+		padding-right: unset;
+		max-width: unset;
+	}
 	.article-annotation-image-rs {
 		flex-direction: row;
+	}
+	.slider-wrapper {
+		left: -5px;
+	}
+	.slider-figcaption {
+		margin-top: unset;
+	}
+	.article-image img {
+		width: 95vw;
+		margin-left: 20px;
+	}
+	.article-image figcaption {
+		margin-bottom: 200px;
+		margin-left: 25px;
 	}
 }
 
@@ -1426,13 +1475,69 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		max-height: unset;
 		object-fit: unset;
 		top: 380px;
-    left: -415px;
-    padding-right:unset;
+		left: -415px;
+		padding-right: unset;
 	}
 	.article-annotation-image__wrapper-centred {
 		position: relative;
 		left: 130px;
+		max-width: 245px;
+		max-height: 415px;
+		height: 100%;
 	}
+	.article-annotation-image__background {
+		max-height: 415px;
+	}
+	.read-also__carousel-block {
+		width: 245px;
+		height: unset;
+	}
+
+	.slider-wrapper {
+		left: -20px;
+		padding: 0;
+	}
+	.slider {
+		left: 0;
+	}
+	.slider__image,
+	.slider-nav {
+		width: 104%;
+	}
+	.slider-figcaption {
+		margin-top: 20px;
+	}
+	.slider-figcaption .text-wrapper p {
+		margin-left: -3px;
+	}
+
+	.text-wrapper.zoom-image {
+		margin-bottom: 170px;
+	}
+	.article-image__zoom {
+		width: 815px;
+		height: 500px;
+	}
+	.article-image img {
+		width: 100%;
+		left: -7px;
+		position: relative;
+	}
+	.article-image {
+		margin-left: 0;
+		left: 0;
+		margin-top: 0;
+	}
+	.article-image figcaption {
+		margin-left: 12px;
+	}
+
+	.read-also-col {
+		padding: 0;
+  }
+  footer .row {
+    width:1155px;
+  }
 }
 
 /*
