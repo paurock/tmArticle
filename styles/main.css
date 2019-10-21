@@ -745,11 +745,18 @@ h5 {
 .text-wrapper.zoom-image {
 	padding-right: 0;
 }
+.zoom-tool-image {
+	position: relative;
+	top: 191px;
+	left:-20px;
+	width: 100px;
+	height: 100px;
+	opacity: 1;
+}
 
 /*SLIDER*/
 .slider-container {
 	display: flex;
-
 	max-width: 100%;
 	max-height: 500px;
 	justify-content: center;
@@ -762,8 +769,6 @@ h5 {
 	justify-content: center;
 	flex-wrap: wrap;
 	padding-right: 0px;
-}
-.slider {
 }
 
 .slider__image {
@@ -815,6 +820,29 @@ h5 {
 	width: 100%;
 }
 
+.slider .slider__image {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
 /*Simple Article Image with Zoom*/
 
 .article-image {
@@ -836,7 +864,7 @@ h5 {
 	width: 790px;
 	height: 480px;
 	background-size: 120px 120px;
-	background: url(../images/zoom-tool.svg) no-repeat center center;
+	/* background: url(../images/zoom-tool.svg) no-repeat center center; */
 }
 
 .article-image__zoom.hover {
@@ -1044,10 +1072,7 @@ Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
 /*320px*/
-@media (max-width: 576px) {
-	.row {
-		/* border:1px solid gray; */
-	}
+@media (max-width: 576px) { 
 
 	.major-main-container {
 		max-width: 100vw;
@@ -1129,9 +1154,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		width: 95vw;
 	}
 	.article-image__zoom {
-		right: -225px;
+		width: 100vw;
+		display: flex;
 		top: -140px;
 	}
+	.article-image__zoom a {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	 
+
 	.article-image figcaption {
 		padding-left: 10px;
 		margin-left: 0;
@@ -1384,7 +1417,57 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	/* MENU HAMBUTGER END */
 }
 /*--------END 320px------------*/
-
+@media (min-width: 576px) and (max-width: 767px) {
+	#main-image img {		 
+		margin-top: 160px;
+	}
+	.article-annotation-image__background {
+		min-width: 100%;
+	}
+	.article-exclamation > span {
+		position:relative;
+		left:45px;
+	}
+	.article-exclamation > p {
+		margin-left:50px;
+	}
+	.article-qoute::after {
+		left:-13px;
+	}
+	.article-exclamation:after {
+		left:-40px;
+	}
+	
+	.article-annotation-image img {
+		top:-40px;
+	}
+	.article-annotation-image-rs__figcaption-wrapper-centred {
+		top:0;
+		margin-bottom: 40px;
+	}
+	.article-annotation-image-rs {
+		flex-direction:column;
+	}
+	.slider-wrapper {
+		left:-9px;
+	}
+	.slider {
+		max-height:270px;
+	}
+	.slider-nav {
+		top:-146%;
+	}
+	.article-image {
+		margin-left:8px;
+	}
+	.zoom-tool-image {
+		top: 164px;
+		left: 412px;
+	}
+	footer .column-1 {
+		width: 100px;
+	}
+}
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) and (max-width: 991px) {
 	.row .article-annotation-image {
@@ -1406,7 +1489,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		top: -340px;
 		left: 415px;
 	}
-
+	.zoom-tool-image {
+		left: 348px;
+	}
 	.slider-figcaption {
 		margin-top: -50px;
 	}
@@ -1471,6 +1556,10 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.slider-figcaption {
 		margin-top: unset;
 	}
+	.zoom-tool-image {		 
+		top: 260px;
+		left: 111px;		 
+	}
 	.article-image img {
 		width: 95vw;
 		margin-left: 20px;
@@ -1504,9 +1593,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.article-qoute {
 		max-width: 815px;
 	}
-  .article-exclamation {
-    max-width:785px;
-  }
+	.article-exclamation {
+		max-width: 785px;
+	}
 	.paragraph {
 		width: 815px;
 	}
@@ -1539,7 +1628,18 @@ IE11
 	.article-annotation-image-rs__figcaption-wrapper-centred p {
 		margin-top: 150px;
 	}
+	.paragraph {
+		margin-left: 340px;
+	}
+	.slider {
+		overflow: hidden;
+	}
 
+	.slider-nav {
+		position: relative;
+		top: -1500px;
+		z-index: 50000;
+	}
 	.footer {
 		width: 100%;
 		height: 115px;
