@@ -1287,7 +1287,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	}
 
 	footer .logo {
-		margin-left: 5px;
+		margin-left: -8px;
 	}
 
 	footer .column-1 {
