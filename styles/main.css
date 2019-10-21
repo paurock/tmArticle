@@ -1504,7 +1504,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.article-qoute {
 		max-width: 815px;
 	}
-
+  .article-exclamation {
+    max-width:785px;
+  }
 	.paragraph {
 		width: 815px;
 	}
