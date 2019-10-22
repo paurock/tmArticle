@@ -1,15 +1,17 @@
 var pressed = false;
 var ahead = true;
 var intervalTime = 3000;
- 
+var counter = 0;
 
 function setPressedFalseAgain() {
 	pressed = false;
 }
+
+ 
+
 document.querySelector('.prev').addEventListener('click', function() {
 	pressed = true;
 	ahead = false;
-	 
 });
 document.querySelector('.next').addEventListener('click', function() {
 	pressed = true;
@@ -21,11 +23,13 @@ var slideIndex = 1;
 
 /* Функция увеличивает индекс на 1, показывает следующй слайд*/
 function plusSlide() {
+	counter=0;
 	showSlides((slideIndex += 1));
 }
 
 /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
 function minusSlide() {
+	counter=0;
 	showSlides((slideIndex -= 1));
 }
 
@@ -58,19 +62,22 @@ const timerId = () => setInterval(() => checkPress(), intervalTime);
 
 //Stop for 10 sec if pressed next or prev
 function checkPress() {
-	if (!pressed) {
+	if (!pressed) {		 
 		if (ahead) {
 			plusSlide();
-			console.log("plus slide")
+			console.log('plus slide');
 		} else {
 			minusSlide();
-			console.log("minus slide")
+			console.log('minus slide');
 		}
 	} else {
-		if (pressed) {
-		setTimeout(() => setPressedFalseAgain(), 10000);
+		counter+=1;		 
+		if (counter>5) {
+			setPressedFalseAgain()
+			counter=0;
 		}
-	console.log("wait 10 sec")
+		console.log('wait sec' + counter);
 	}
 }
+
 timerId();
