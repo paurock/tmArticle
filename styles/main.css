@@ -1628,9 +1628,12 @@ Custom media queries
 IE11
 */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	header {margin-left:10%;}
+	#main-image {margin-left:1%;}
 	.row {
 		width: 100%;
 	}
+	.main-menu a {font-size:90%;}
 	.article-annotation-image-rs__figcaption-wrapper-centred p {
 		margin-top: 150px;
 	}
@@ -1643,7 +1646,7 @@ IE11
 
 	.slider-nav {
 		position: relative;
-		top: -1500px;
+		top: -516px;
 		z-index: 50000;
 	}
 	.footer {
