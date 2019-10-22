@@ -1,21 +1,23 @@
 var pressed = false;
+var ahead = true;
 var intervalTime = 3000;
+ 
 
 function setPressedFalseAgain() {
 	pressed = false;
 }
 document.querySelector('.prev').addEventListener('click', function() {
 	pressed = true;
-	setTimeout(()=>setPressedFalseAgain(), 10000);
+	ahead = false;
+	 
 });
 document.querySelector('.next').addEventListener('click', function() {
 	pressed = true;
-	setTimeout(()=>setPressedFalseAgain(), 10000);
+	ahead = true;
 });
 
 /* Индекс слайда по умолчанию */
 var slideIndex = 1;
-showSlides(slideIndex);
 
 /* Функция увеличивает индекс на 1, показывает следующй слайд*/
 function plusSlide() {
@@ -48,11 +50,27 @@ function showSlides(n) {
 
 	slides[slideIndex - 1].style.display = 'block';
 }
+
+showSlides(slideIndex);
+
+//Slidewhow
 const timerId = () => setInterval(() => checkPress(), intervalTime);
 
+//Stop for 10 sec if pressed next or prev
 function checkPress() {
 	if (!pressed) {
-		plusSlide();		
+		if (ahead) {
+			plusSlide();
+			console.log("plus slide")
+		} else {
+			minusSlide();
+			console.log("minus slide")
+		}
+	} else {
+		if (pressed) {
+		setTimeout(() => setPressedFalseAgain(), 10000);
+		}
+	console.log("wait 10 sec")
 	}
 }
 timerId();
