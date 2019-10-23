@@ -1163,7 +1163,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.article-image:after {	 
 		top: 20%;
 		left: -19px;		 
-		background: url(/images/zoom-tool.svg) no-repeat center center;
+		background: url(../images/zoom-tool.svg) no-repeat center center;
 	}
 	.article-image img {
 		margin-left: -5px;
@@ -1489,7 +1489,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.article-image:after {		 
 		top: 28%;
 		left: -10px;		 
-		background: url(/images/zoom-tool.svg) no-repeat center center;
+		background: url(../images/zoom-tool.svg) no-repeat center center;
 	}
 	footer .column-1 {
 		width: 100px;
@@ -1519,7 +1519,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	.article-image:after {		 
 		top: 33%;
 		left: -52px;		 
-		background: url(/images/zoom-tool.svg) no-repeat center center;
+		background: url(../images/zoom-tool.svg) no-repeat center center;
 	}
 	.zoom-tool-image {
 		left: 348px;
@@ -1600,7 +1600,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		width: 100vw;
 		height: 130px;
 		background-size: 120px 120px;
-		background: url(/images/zoom-tool.svg) no-repeat center center;
+		background: url(../images/zoom-tool.svg) no-repeat center center;
 	}
 	.article-image img {
 		width: 95vw;
