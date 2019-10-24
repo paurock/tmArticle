@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Geometria";
   src: url(../fonts/Geometria.woff2);
+  src: local("Geometria"), url(../fonts/Geometria.eot);
   font-style: normal;
   font-weight: 100;
 }
@@ -8,6 +9,7 @@
 @font-face {
   font-family: "Geometria";
   src: url(../fonts/Geometria-Bold.woff2);
+  src: local("Geometria"), url(../fonts/Geometria-Bold.eot);
   font-style: normal;
   font-weight: 600;
 }
@@ -15,6 +17,7 @@
 @font-face {
   font-family: "Geometria";
   src: url(../fonts/Geometria-Medium.woff2);
+  src: local("Geometria"), url(../fonts/Geometria-Medium.eot);
   font-style: normal;
   font-weight: 300;
 }
@@ -1705,6 +1708,26 @@ Custom media queries
 IE11
 */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	@font-face {
+		font-family: "Geometria";		 
+		src: local("Geometria"), url(../fonts/Geometria.eot);
+		font-style: normal;
+		font-weight: 100;
+	  }
+	  
+	  @font-face {
+		font-family: "Geometria";
+		src: local("Geometria"), url(../fonts/Geometria-Bold.eot);
+		font-style: normal;
+		font-weight: 600;
+	  }
+	  
+	  @font-face {
+		font-family: "Geometria";
+		src: local("Geometria"), url(../fonts/Geometria-Medium.eot);
+		font-style: normal;
+		font-weight: 300;
+	  }
   header {
     margin-left: 10%;
   }
@@ -1747,7 +1770,13 @@ EDGE
 	.main-menu__item a{
 		font-size:0.7rem;
 	}
+	 .just-paragraph .row {
+		flex-wrap:nowrap;
+	}
 	.just-paragraph-aside {
-		min-width:415px;
+		min-width:415px;	
+	}
+	.slider-figcaption .row {
+		flex-wrap:nowrap;
 	}
 }
