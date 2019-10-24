@@ -1710,21 +1710,21 @@ IE11
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	@font-face {
 		font-family: "Geometria";		 
-		src: local("Geometria"), url(../fonts/Geometria.eot);
+		src: local("Geometria"), url("../fonts/Geometria.eot") format("embedded-opentype");
 		font-style: normal;
 		font-weight: 100;
 	  }
 	  
 	  @font-face {
 		font-family: "Geometria";
-		src: local("Geometria"), url(../fonts/Geometria-Bold.eot);
+		src: local("Geometria"), url("../fonts/Geometria-Bold.eot") format("embedded-opentype");
 		font-style: normal;
 		font-weight: 600;
 	  }
 	  
 	  @font-face {
 		font-family: "Geometria";
-		src: local("Geometria"), url(../fonts/Geometria-Medium.eot);
+		src: local("Geometria"), url("../fonts/Geometria-Medium.eot") format("embedded-opentype");
 		font-style: normal;
 		font-weight: 300;
 	  }
