@@ -18,7 +18,6 @@
 	font-style: normal;
 	font-weight: 300;
 }
- 
 
 body {
 	background: #fafafa;
@@ -955,8 +954,7 @@ figcaption > p {
 /*READ ALSO */
 .read-also {
 	width: 100%;
-	height: 400px;
-	margin-bottom: 120px;
+	margin-bottom: 60px;
 }
 
 .read-also__title {
@@ -965,8 +963,7 @@ figcaption > p {
 	font-size: 2rem;
 }
 
-.read-also__carousel {
-	height: 400px;
+.read-also__carousel {	 
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -1707,6 +1704,9 @@ IE11
 
 	header .row {
 		min-width: 980px;
+	}
+	.article-info-content__sidebar li {
+		border-bottom:1px solid rgb(211, 211, 211);
 	}
 
 	#main-image {
