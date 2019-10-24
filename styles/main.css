@@ -1241,8 +1241,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     order: 1;
   }
 
-  .slider {
-    height: 170px;
+  .slider { 
+	max-height:40vw;
     padding-right: 15px;
   }
   .slider-wrapper {
