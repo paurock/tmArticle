@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="styles/bootstrap.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles/baguetteBox.min.css">
+  <link rel="preload" href="fonts/Geometria.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Geometria-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Geometria-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/main.css" />
   <title>Re2:Время машин - Статья</title>
 </head>
@@ -391,8 +394,9 @@
             <div class="col col-sm-12 col-md-12 col-lg-8 text-wrapper zoom-image">
               <!--Article Image with Zoom-->
               <figure class="article-image gallery">
-                <div class="article-image__zoom"><a href="images/slider/slide1.jpg"> <img src="images/zoom-tool.svg" class="zoom-tool-image" alt="zoom"></a></div>
-                  <img class="article-image__img" src="images/forest.png" alt="Image" /> 
+                <div class="article-image__zoom"><a href="images/slider/slide1.jpg"> <img src="images/zoom-tool.svg"
+                      class="zoom-tool-image" alt="zoom"></a></div>
+                <img class="article-image__img" src="images/forest.png" alt="Image" />
                 <figcaption>
                   <p>
                     Мало кто знает, что на заводе была разработана
@@ -533,9 +537,9 @@
 <script src="js/main.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/slider.js"></script>
-<script src="js/baguetteBox.min.js"  ></script>
+<script src="js/baguetteBox.min.js"></script>
 <script>
- baguetteBox.run('.gallery');
+  baguetteBox.run('.gallery');
 </script>
 
 </html>
