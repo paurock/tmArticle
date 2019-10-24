@@ -35,10 +35,7 @@ p {
   line-height: 30px;
   font-size: 20px;
   font-weight: 100;
-}
-.paragraph {
-  margin-left: -15px;
-}
+} 
 
 span {
   font-weight: 100;
@@ -1718,7 +1715,7 @@ IE11
     width: 100%;
   }
   .main-menu a {
-    font-size: 90%;
+    font-size: 0.7rem;
   }
   .article-annotation-image-rs__figcaption-wrapper-centred p {
     margin-top: 150px;
@@ -1739,4 +1736,18 @@ IE11
     width: 100%;
     height: 115px;
   }
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+EDGE
+*/
+@supports (-ms-ime-align:auto) {
+	footer { margin-top:30vw;} 
+	.main-menu__item a{
+		font-size:0.7rem;
+	}
+	.just-paragraph-aside {
+		min-width:415px;
+	}
 }
