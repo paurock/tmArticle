@@ -20,6 +20,7 @@
 }
 
 body {
+	margin:0;
 	background: #fafafa;
 	font-size: 15px;
 	font-family: Geometria, Georgia, Times, serif;
@@ -1792,9 +1793,7 @@ EDGE
 	footer {
 		margin-top: 30vw;
 	}
-	.main-menu__item a {
-		/* font-size:0.7rem; */
-	}
+ 
 	.just-paragraph .row {
 		flex-wrap: nowrap;
 	}
