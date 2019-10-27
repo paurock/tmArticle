@@ -1682,6 +1682,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 		max-height: 100%;
 		overflow:hidden;
 	}
+	.article-annotation-image-rs__figcaption-wrapper-centred {
+		top:unset;
+	}
 
 	.article-image img {
 		width: 99%;
